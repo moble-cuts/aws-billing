@@ -14,7 +14,7 @@ Parameters:
     Description: Threshold for budget is set to trigger email at 55
 
 Resources:
-  AcoountBudget:
+  AccountBudget:
     Type: "AWS::Budgets::Budget"
     Properties:
       Budget:
