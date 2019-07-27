@@ -1,2 +1,2 @@
-# Cloudformation 
+# Cloudformation
 infrastructure as code 
