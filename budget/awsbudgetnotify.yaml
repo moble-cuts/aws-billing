@@ -1,0 +1,12 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Template that will send out an email of AWS billing costs and when it goes over a certain amount.
+
+Parameters:
+	Amount:
+		Type: String
+		Default: 60
+		Description: Budget limit amount
+	
+
