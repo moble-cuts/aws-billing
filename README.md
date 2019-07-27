@@ -1,2 +1,2 @@
-# terraform
+# Cloudformation 
 infrastructure as code 
