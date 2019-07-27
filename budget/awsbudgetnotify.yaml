@@ -11,7 +11,7 @@ Parameters:
   Threshold:
     Type: String
     Default: 55
-    Description: Threshold for budget is set to trigger email a 55
+    Description: Threshold for budget is set to trigger email at 55
 
 Resources:
   AcoountBudget:
