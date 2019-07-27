@@ -8,5 +8,35 @@ Parameters:
 		Type: String
 		Default: 60
 		Description: Budget limit amount
-	
+	Threshold:
+		Type: String
+		Default: 55
+		Description: Threshold for budget is set to trigger email a 55
 
+Resources:
+  AcoountBudget:
+    Type: "AWS::Budgets::Budget"
+    Properties:
+      Budget:
+        BudgetLimit:
+          Amount: !Ref Amount
+          Unit: USD
+        TimeUnit: MONTHLY
+        TimePeriod:
+          Start: 1225864800
+          End: 1926864800
+        BudgetType: COST
+        CostFilters:
+          AZ:
+            - us-east-1
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: !Ref Threshold
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: dharrison@mobilecutsbos.com
+Outputs:
+  BudgetId:
+    Value: !Ref AccountBudget
